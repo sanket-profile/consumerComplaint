@@ -1,0 +1,6 @@
+[ 2024-08-03 01:27:53,342  22 COMPONENTS - INFO - Starting Data Ingestion]
+[ 2024-08-03 01:28:22,049  26 COMPONENTS - INFO - Data Ingestion completed]
+[ 2024-08-03 01:28:22,055  142 COMPONENTS - INFO - Preprocessed the train and text data]
+[ 2024-08-03 01:28:22,055  143 COMPONENTS - INFO - Converting text data into numerical vector representation using TF-IDF]
+[ 2024-08-03 01:28:31,122  150 COMPONENTS - INFO - read all the data                                                 text
+0  checking account deposits and withdrawals  hav...]

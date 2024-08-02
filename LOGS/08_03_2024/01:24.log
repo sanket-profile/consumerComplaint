@@ -1,0 +1,4 @@
+[ 2024-08-03 01:25:12,094  22 COMPONENTS - INFO - Starting Data Ingestion]
+[ 2024-08-03 01:25:38,538  26 COMPONENTS - INFO - Data Ingestion completed]
+[ 2024-08-03 01:25:38,539  142 COMPONENTS - INFO - Preprocessed the train and text data]
+[ 2024-08-03 01:25:38,539  143 COMPONENTS - INFO - Converting text data into numerical vector representation using TF-IDF]

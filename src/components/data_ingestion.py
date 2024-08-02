@@ -7,6 +7,7 @@ from sklearn.model_selection import train_test_split
 
 from src.logger import logger
 from src.exception import CustomException
+from src.components.data_transformation import dataTransformation
 
 @dataclass
 class dataIngestionConfig():
@@ -30,3 +31,11 @@ class dataIngestion():
                 )
         except Exception as e:
             raise CustomException("Something wrong in initiateDataIngestion method of dataIngestion class")
+
+
+if __name__ == "__main__":
+    data_ingestion = dataIngestion()
+    df,path = data_ingestion.initiateDataIngestion()
+    data_transformation = dataTransformation()
+    data_transformation.initiateDataTransformation(df=df)
+    print(path)
