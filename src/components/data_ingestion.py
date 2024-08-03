@@ -12,6 +12,7 @@ from src.components.data_transformation import dataTransformation
 from src.components.model_training import modelTraining
 from src.pipelines.prediction_pipeline import predictionPipeline
 from src.components.data_transformation_transformers import dataTransformation
+from src.components.model_training_transformer import modelTraining
 
 @dataclass
 class dataIngestionConfig():
@@ -38,10 +39,10 @@ class dataIngestion():
 
 
 if __name__ == "__main__":
-    
+    """# DeepLearning model
     data_ingestion = dataIngestion()
     df,path = data_ingestion.initiateDataIngestion()
-    """
+    
     data_transformation = dataTransformation()
     X_train_tfidf,X_test_tfidf,y_train,y_test,_,_,_,_,tfidf,le = data_transformation.initiateDataTransformation(df=df)
 
@@ -53,6 +54,15 @@ if __name__ == "__main__":
     prediction_pipeline = predictionPipeline()
     print(prediction_pipeline.predict(X=x,tfidfPath=tfidf,modelPath=logisticPath,lePath=le))
 
-    """
+    
+    data_ingestion = dataIngestion()
+    df,path = data_ingestion.initiateDataIngestion()
     data_transformation = dataTransformation()
     data_transformation.initiateDataTransformation(df)
+
+    """
+    train_dataset = "/Users/sanketsaxena/Desktop/consumerComplaint/Artifacts/tensorflowDatasetTrain"
+    test_dataset = "/Users/sanketsaxena/Desktop/consumerComplaint/Artifacts/tensorflowDatasetTest"
+
+    model_training = modelTraining()
+    model_training.initiateModelTraining(train_dataset=train_dataset,test_dataset=test_dataset)

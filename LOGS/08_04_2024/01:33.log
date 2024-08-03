@@ -1,0 +1,12 @@
+[ 2024-08-04 01:33:47,609  107 dagshub - INFO - Accessing as sanket-profile]
+[ 2024-08-04 01:33:48,304  107 dagshub - INFO - Initialized MLflow to track repo "sanket-profile/consumerComplaint"]
+[ 2024-08-04 01:33:48,304  107 dagshub - INFO - Repository sanket-profile/consumerComplaint initialized!]
+[ 2024-08-04 01:33:53,340  107 dagshub - INFO - Initialized MLflow to track repo "sanket-profile/consumerComplaint"]
+[ 2024-08-04 01:33:53,341  107 dagshub - INFO - Repository sanket-profile/consumerComplaint initialized!]
+[ 2024-08-04 01:33:56,368  44 COMPONENTS - INFO - Starting the training process]
+[ 2024-08-04 01:33:56,369  45 COMPONENTS - INFO - Loading Train and Test DataSet]
+[ 2024-08-04 01:33:56,370  50 tensorflow - WARNING - From /Users/sanketsaxena/Desktop/consumerComplaint/src/components/model_training_transformer.py:55: load (from tensorflow.python.data.experimental.ops.io) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.data.Dataset.load(...)` instead.]
+[ 2024-08-04 01:33:57,043  58 COMPONENTS - INFO - Loaded Train and Test DataSet]
+[ 2024-08-04 01:33:57,043  59 COMPONENTS - INFO - Loading and training the model]
