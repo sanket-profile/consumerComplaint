@@ -1,0 +1,12 @@
+[ 2024-08-03 20:28:24,821  97 werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000]
+[ 2024-08-03 20:28:24,821  97 werkzeug - INFO - [33mPress CTRL+C to quit[0m]
+[ 2024-08-03 20:28:24,821  97 werkzeug - INFO -  * Restarting with stat]
+[ 2024-08-03 20:28:25,920  97 werkzeug - WARNING -  * Debugger is active!]
+[ 2024-08-03 20:28:25,933  97 werkzeug - INFO -  * Debugger PIN: 675-676-195]
+[ 2024-08-03 20:29:03,661  97 werkzeug - INFO - 127.0.0.1 - - [03/Aug/2024 20:29:03] "[32mGET / HTTP/1.1[0m" 302 -]
+[ 2024-08-03 20:29:03,669  97 werkzeug - INFO - 127.0.0.1 - - [03/Aug/2024 20:29:03] "GET /predict HTTP/1.1" 200 -]
+[ 2024-08-03 20:30:43,941  97 werkzeug - INFO - 127.0.0.1 - - [03/Aug/2024 20:30:43] "GET /predict HTTP/1.1" 200 -]
+[ 2024-08-03 20:31:07,680  97 werkzeug - INFO - 127.0.0.1 - - [03/Aug/2024 20:31:07] "GET /predict HTTP/1.1" 200 -]
+[ 2024-08-03 20:33:01,145  97 werkzeug - INFO -  * Detected change in '/Users/sanketsaxena/Desktop/consumerComplaint/application.py', reloading]
+[ 2024-08-03 20:33:01,536  97 werkzeug - INFO -  * Restarting with stat]

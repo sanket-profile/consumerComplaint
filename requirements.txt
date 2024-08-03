@@ -9,3 +9,8 @@ nltk
 imblearn
 scipy
 dagshub
+ipykernel
+tf-keras
+tensorflow
+transformers
+datasets

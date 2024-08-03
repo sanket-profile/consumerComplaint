@@ -1,0 +1,8 @@
+[ 2024-08-03 20:36:02,118  97 werkzeug - WARNING -  * Debugger is active!]
+[ 2024-08-03 20:36:02,146  97 werkzeug - INFO -  * Debugger PIN: 675-676-195]
+[ 2024-08-03 20:36:06,186  97 werkzeug - INFO - 127.0.0.1 - - [03/Aug/2024 20:36:06] "GET /predict HTTP/1.1" 200 -]
+[ 2024-08-03 20:44:04,213  97 werkzeug - INFO - 127.0.0.1 - - [03/Aug/2024 20:44:04] "GET /predict HTTP/1.1" 200 -]
+[ 2024-08-03 20:44:09,421  25 COMPONENTS - INFO - Initiating prediction]
+[ 2024-08-03 20:44:09,421  26 COMPONENTS - INFO - Preprocessing the input text]
+[ 2024-08-03 20:44:09,454  97 werkzeug - INFO - 127.0.0.1 - - [03/Aug/2024 20:44:09] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -]
+[ 2024-08-03 20:50:49,137  97 werkzeug - INFO -  * Detected change in '/Users/sanketsaxena/Desktop/consumerComplaint/application.py', reloading]
