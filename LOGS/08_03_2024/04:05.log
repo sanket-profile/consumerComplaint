@@ -1,0 +1,54 @@
+[ 2024-08-03 04:05:10,929  107 dagshub - INFO - Accessing as sanket-profile]
+[ 2024-08-03 04:05:11,438  107 dagshub - INFO - Initialized MLflow to track repo "sanket-profile/consumerComplaint"]
+[ 2024-08-03 04:05:11,438  107 dagshub - INFO - Repository sanket-profile/consumerComplaint initialized!]
+[ 2024-08-03 04:05:15,648  43 COMPONENTS - INFO - Starting the training process]
+[ 2024-08-03 04:05:15,649  44 COMPONENTS - INFO - Loading and training Logistic Regression and RandomForestClassifier]
+[ 2024-08-03 04:05:15,650  51 COMPONENTS - INFO - I am here]
+[ 2024-08-03 04:05:15,650  53 COMPONENTS - INFO - I am here]
+[ 2024-08-03 04:05:25,525  70 COMPONENTS - INFO - Model: RandomForestClassifier]
+[ 2024-08-03 04:05:25,526  71 COMPONENTS - INFO - Accuracy:
+0.3454967796431211]
+[ 2024-08-03 04:05:25,526  72 COMPONENTS - INFO - Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.79      0.26      0.39     22970
+           1       0.22      1.00      0.35     32302
+           2       0.82      0.17      0.29     30676
+           3       0.70      0.17      0.27     49621
+           4       0.00      0.00      0.00      8447
+           5       0.97      0.56      0.71     23775
+           6       0.00      0.00      0.00        26
+           7       0.00      0.00      0.00      6531
+           8       0.98      0.05      0.10      8807
+           9       0.00      0.00      0.00      6265
+
+    accuracy                           0.35    189420
+   macro avg       0.45      0.22      0.21    189420
+weighted avg       0.62      0.35      0.32    189420
+]
+[ 2024-08-03 04:05:25,526  74 COMPONENTS - INFO - Saving RandomForestClassifier into pickle file in Artifacts Folder]
+[ 2024-08-03 04:05:25,527  84 COMPONENTS - INFO - Saved RandomForestClassifier model into pickle file]
+[ 2024-08-03 04:05:25,527  53 COMPONENTS - INFO - I am here]
+[ 2024-08-03 04:06:21,234  70 COMPONENTS - INFO - Model: LogisticRegression]
+[ 2024-08-03 04:06:21,235  71 COMPONENTS - INFO - Accuracy:
+0.9826259106746912]
+[ 2024-08-03 04:06:21,235  72 COMPONENTS - INFO - Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.99      0.99      0.99     22970
+           1       0.97      0.99      0.98     32302
+           2       0.99      0.98      0.99     30676
+           3       0.99      0.99      0.99     49621
+           4       0.98      0.97      0.98      8447
+           5       0.99      0.99      0.99     23775
+           6       0.00      0.00      0.00        26
+           7       0.94      0.89      0.92      6531
+           8       0.99      0.99      0.99      8807
+           9       0.93      0.91      0.92      6265
+
+    accuracy                           0.98    189420
+   macro avg       0.88      0.87      0.87    189420
+weighted avg       0.98      0.98      0.98    189420
+]
+[ 2024-08-03 04:06:21,235  74 COMPONENTS - INFO - Saving LogisticRegression into pickle file in Artifacts Folder]
+[ 2024-08-03 04:06:21,238  84 COMPONENTS - INFO - Saved LogisticRegression model into pickle file]

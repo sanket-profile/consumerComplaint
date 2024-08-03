@@ -1,0 +1,7 @@
+[ 2024-08-03 03:31:59,307  107 dagshub - INFO - Accessing as sanket-profile]
+[ 2024-08-03 03:31:59,748  107 dagshub - INFO - Initialized MLflow to track repo "sanket-profile/consumerComplaint"]
+[ 2024-08-03 03:31:59,749  107 dagshub - INFO - Repository sanket-profile/consumerComplaint initialized!]
+[ 2024-08-03 03:32:04,257  40 COMPONENTS - INFO - Starting the training process]
+[ 2024-08-03 03:32:04,258  41 COMPONENTS - INFO - Loading and training Logistic Regression and RandomForestClassifier]
+[ 2024-08-03 03:32:04,258  48 COMPONENTS - INFO - I am here]
+[ 2024-08-03 03:32:04,258  51 COMPONENTS - INFO - I am here]

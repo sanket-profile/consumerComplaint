@@ -1,13 +1,15 @@
 import os
-import warnings
 import pandas as pd
+import numpy as np
+
+from scipy.sparse import load_npz
 
 from dataclasses import dataclass
-from sklearn.model_selection import train_test_split
 
 from src.logger import logger
 from src.exception import CustomException
 from src.components.data_transformation import dataTransformation
+from src.components.model_training import modelTraining
 
 @dataclass
 class dataIngestionConfig():
@@ -34,8 +36,15 @@ class dataIngestion():
 
 
 if __name__ == "__main__":
-    data_ingestion = dataIngestion()
+    """data_ingestion = dataIngestion()
     df,path = data_ingestion.initiateDataIngestion()
     data_transformation = dataTransformation()
-    data_transformation.initiateDataTransformation(df=df)
-    print(path)
+    data_transformation.initiateDataTransformation(df=df)"""
+
+
+    X_train_tfidf = load_npz("/Users/sanketsaxena/Desktop/consumerComplaint/Artifacts/Xtrain_tfidf.npz")
+    X_test_tfidf = load_npz("/Users/sanketsaxena/Desktop/consumerComplaint/Artifacts/Xtest_tfidf.npz")
+    y_train = np.load('/Users/sanketsaxena/Desktop/consumerComplaint/Artifacts/y_train_encoded.npy')
+    y_test = np.load('/Users/sanketsaxena/Desktop/consumerComplaint/Artifacts/y_test_encoded.npy')
+    model_training = modelTraining()
+    model_training.initiateModelTraining(X_train=X_train_tfidf,X_test=X_test_tfidf,y_train=y_train,y_test=y_test)
