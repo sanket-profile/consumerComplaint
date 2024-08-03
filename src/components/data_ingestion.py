@@ -26,7 +26,7 @@ class dataIngestion():
         try:
             logger.info("Starting Data Ingestion")
 
-            df = pd.read_csv("/Users/sanketsaxena/Desktop/consumerComplaint/Artifacts/complaints.csv")
+            df = pd.read_csv(self.data_Ingestion_Config.rawDataPath)
 
             logger.info("Data Ingestion completed")
 

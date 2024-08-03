@@ -1,6 +1,8 @@
 import warnings
 warnings.filterwarnings('ignore')
 
+import os
+
 from flask import Flask
 from flask import request, render_template, url_for, redirect,jsonify
 import requests
@@ -20,9 +22,9 @@ def predict():
     if(request.method == "GET"):
         return render_template("predict.html")
     else:
-        tfidf = "/Users/sanketsaxena/Desktop/consumerComplaint/Artifacts/tfidf.pkl"
-        model = "/Users/sanketsaxena/Desktop/consumerComplaint/Artifacts/logisticModel.pkl"
-        le = "/Users/sanketsaxena/Desktop/consumerComplaint/Artifacts/le.pkl"
+        tfidf = os.path.join(os.getcwd(),"Artifacts","tfidf.pkl")
+        model = os.path.join(os.getcwd(),"Artifacts","logisticModel.pkl")
+        le = os.path.join(os.getcwd(),"Artifacts","le.pkl")
         X = request.form.get("inputText")
         print(X)
         predict_pipeline = predictionPipeline()
@@ -37,4 +39,4 @@ def predict():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=5000)
