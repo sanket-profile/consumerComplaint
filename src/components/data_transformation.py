@@ -1,5 +1,6 @@
 import os
 import sys
+import pickle
 
 import nltk
 nltk.download('stopwords')
@@ -31,6 +32,8 @@ class dataTransformationConfig():
     Xtest_tfidf_path : str = os.path.join(os.getcwd(),"Artifacts","Xtest_tfidf.npz")
     ytrain_encoded_path : str = os.path.join(os.getcwd(),"Artifacts","y_train_encoded.npy")
     ytest_encoded_path : str = os.path.join(os.getcwd(),"Artifacts","y_test_encoded.npy")
+    tfidf_path : str = os.path.join(os.getcwd(),"Artifacts","tfidf.pkl")
+    lableEncoder_path : str = os.path.join(os.getcwd(),"Artifacts","le.pkl")
 
 class dataTransformation():
     def __init__(self) -> None:
@@ -139,20 +142,7 @@ class dataTransformation():
 
             X_train_res= X_train_res.apply(preprocess_text)
             X_test_res= X_test_res.apply(preprocess_text)
-            """
-            logger.info("Preprocessed the train and text data")
-            logger.info("Converting text data into numerical vector representation using TF-IDF")
 
-            X_train_res = pd.read_csv("/Users/sanketsaxena/Desktop/consumerComplaint/Artifacts/X_test_res.csv")
-            X_test_res = pd.read_csv("/Users/sanketsaxena/Desktop/consumerComplaint/Artifacts/X_train_res.csv")
-            y_train_res = pd.read_csv("/Users/sanketsaxena/Desktop/consumerComplaint/Artifacts/y_train_res.csv")
-            y_test_res = pd.read_csv("/Users/sanketsaxena/Desktop/consumerComplaint/Artifacts/y_test_res.csv")
-
-            X_train_res = X_train_res['text']
-            X_test_res = X_test_res['text']
-            y_train_res = y_train_res['label']
-            y_test_res = y_test_res['label']
-"""
             tfidf = TfidfVectorizer(sublinear_tf=True, min_df=5,
                         stop_words='english')
             
@@ -170,6 +160,13 @@ class dataTransformation():
             logger.info("Data Transformation Finished")
             logger.info("Saving the transformed X_train,X_test,y_train and y_test into Artifact Folder")
 
+
+            with open(self.data_transformation_config.tfidf_path, 'wb') as file:
+                pickle.dump(tfidf, file)
+
+            with open(self.data_transformation_config.lableEncoder_path, 'wb') as file:
+                pickle.dump(le, file)
+
             save_npz(self.data_transformation_config.Xtrain_tfidf_path,X_train_tfidf)
             save_npz(self.data_transformation_config.Xtest_tfidf_path,X_test_tfidf)
             np.save(self.data_transformation_config.ytrain_encoded_path,y_train_encoded)
@@ -185,7 +182,9 @@ class dataTransformation():
                 self.data_transformation_config.Xtrain_tfidf_path,
                 self.data_transformation_config.Xtest_tfidf_path,
                 self.data_transformation_config.ytrain_encoded_path,
-                self.data_transformation_config.ytest_encoded_path
+                self.data_transformation_config.ytest_encoded_path,
+                self.data_transformation_config.tfidf_path,
+                self.data_transformation_config.lableEncoder_path
             )
 
         except Exception as e:

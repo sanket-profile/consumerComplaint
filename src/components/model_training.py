@@ -50,9 +50,7 @@ class modelTraining():
                     LogisticRegression(random_state=42)
                 ]
                 i = 0
-                logger.info("I am here")
                 for model in models:
-                    logger.info("I am here")
                     model.fit(X_train, y_train)
                     
                     y_pred = model.predict(X_test)
@@ -73,17 +71,16 @@ class modelTraining():
                     logger.info("Accuracy:\n%s", accuracy)
                     logger.info("Classification Report:\n%s", report)
 
-                    logger.info(f"Saving {model.__class__.__name__} into pickle file in Artifacts Folder")
-
                     if i == 0:
                         pickle_file = self.model_training_config.forestModelPath
+                        i += 1
                     else:
                         pickle_file = self.model_training_config.logisticModelPath
 
                     with open(pickle_file, 'wb') as file:
                         pickle.dump(model, file)
 
-                    logger.info(f"Saved {model.__class__.__name__} model into pickle file")
+                    logger.info(f"Saving {model.__class__.__name__} into pickle file in Artifacts Folder")
 
                 return (
                 self.model_training_config.logisticModelPath,
