@@ -32,3 +32,6 @@
 **/values.dev.yaml
 LICENSE
 README.md
+src/__pycache__
+venv
+Artifacts/complaints.csv

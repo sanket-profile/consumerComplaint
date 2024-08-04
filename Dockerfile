@@ -18,22 +18,20 @@ ENV PYTHONUNBUFFERED=1
 
 WORKDIR /app
 
+RUN apt-get update && apt-get install -y \
+    build-essential \
+    pkg-config \
+    libhdf5-dev
+
+RUN pip install --upgrade pip
+COPY requirements.txt ./requirements.txt
 # Download dependencies as a separate step to take advantage of Docker's caching.
 # Leverage a cache mount to /root/.cache/pip to speed up subsequent builds.
 # Leverage a bind mount to requirements.txt to avoid having to copy them into
 # into this layer.
-
-RUN apt-get update && apt-get install -y \
-libhdf5-dev && rm -rf /var/lib/apt/lists/*
+RUN python -m pip install --no-cache-dir -r requirements.txt
 
 
-RUN pip install --upgrade pip
-
-RUN --mount=type=cache,target=/root/.cache/pip \
-    --mount=type=bind,source=requirements.txt,target=requirements.txt \
-    python -m pip install -r requirements.txt
-
-    
 # Copy the source code into the container.
 COPY . .
 

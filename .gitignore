@@ -1,3 +1,7 @@
-/Artifacts
+.venv
 venv/
+__pycache__/
 .DS_Store
+ARTIFACTS/
+/ARTIFACTS
+LOGS
